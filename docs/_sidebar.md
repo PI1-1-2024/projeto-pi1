@@ -1,7 +1,7 @@
 - Documentação
 
     - [Backlog](sidebar-pages/Backlog/backlog.md)
-    - [Caso de uso](sidebar-pages/Backlog/user-story.md)
+    - [Caso de uso](sidebar-pages/Backlog/caso-de-uso.md)
 
 - Sistema
     - [Arquitetura](plugins.md)
