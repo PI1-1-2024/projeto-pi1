@@ -4,6 +4,8 @@
 |30/05/2024|0.1|Primeira versão do Backlog do Produto|[Ana Luíza Fernandes](https://github.com/analufernanndess)
 
 # 1. Requisitos Funcionais:
+Requisitos funcionais são especificações que descrevem o que um sistema, aplicativo ou produto deve fazer.
+
 
 |N°|Classificação|Requisitos Funcionais|
 |--|-------------|---------------------|
