@@ -12,7 +12,7 @@
     - [Modelo de Banco de dados](language-highlight.md)
 
 - Entregas
-    - [Entrega 1](entrega1.md)
+    - [Entrega 1](Entrega1.md)
     - [Entrega 2](entrega2.md)
     - [Entrega 3](entrega3.md)
     - [Entrega 4](entrega4.md)
