@@ -12,13 +12,8 @@
     - [Modelo de Banco de dados](language-highlight.md)
 
 - Entregas
-    - [Sprint 1](sprint1.md)
-    - [Sprint 2](sprint2.md)
-    - [Sprint 3](sprint3.md)
-    - [Sprint 4](sprint4.md)
-    - [Sprint 5](sprint5.md)
-    - [Sprint 6](sprint6.md)
-    - [Sprint 7](sprint7.md)
-    - [Sprint 8](sprint8.md)
-    - [Sprint 9](sprint9.md)
-    - [Sprint 10](sprint10.md)
+    - [Entrega 1](entrega1.md)
+    - [Entrega 2](entrega2.md)
+    - [Entrega 3](entrega3.md)
+    - [Entrega 4](entrega4.md)
+    - [Entrega 5](entrega5.md)
