@@ -6,6 +6,7 @@
 # 1. Backlog do Produto:
 O Backlog do Produto é um artefato da metodologia ágil SCRUM, que consiste em uma lista dos requisitos funcionais emergentes para o desenvolvimento do produto. O escopo do projeto foi delimitado a partir da necessidade de criar um novo sistema de gerenciamento para uma otica. O objetivo é entregar um produto profissional com um custo abaixo do mercado, focado na agilidade em gerenciar cliente,produtos e vendas.
 
+## 2. Requisitos Funcionais:
 
 |N°|Classificação|Requisitos Funcionais|
 |--|-------------|---------------------|
@@ -14,7 +15,7 @@ O Backlog do Produto é um artefato da metodologia ágil SCRUM, que consiste em 
 |RF03|Requisito de Interface de Usuário|Apresentar dados no dashboard: Trajetória percorrida, tempo de percurso e consumo energético|
 
 
-# 2. Requisitos não funcionais:
+## 3. Requisitos não funcionais:
 Os requisitos não funcionais (RNFs) definem os atributos do sistema, como segurança, confiabilidade, desempenho, capacidade de manutenção, usabilidade. Eles servem como restrições ou constrangimentos no design do sistema em diferentes pendências.
 
 
