@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { DadosCarroDto } from './dto/DadosCarro.dto';
+import { DadosVeicularesEnity } from '../entity/dadosVeiculares.enity';
 
 @Injectable()
 export class CarroRepository {
-  private dadosPercurso: DadosCarroDto[] = [];
+  private dadosPercurso: DadosVeicularesEnity[] = [];
 
-  criarPercuso(dadosPercurso: DadosCarroDto) {
+  criarPercuso(dadosPercurso: DadosVeicularesEnity) {
     this.dadosPercurso.push(dadosPercurso);
   }
 

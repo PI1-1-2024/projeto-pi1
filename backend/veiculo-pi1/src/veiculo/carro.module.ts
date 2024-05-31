@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { CarroController } from './carro.controller';
-import { CarroRepository } from './carro.repository';
+import { CarroController } from './controller/carro.controller';
+import { CarroRepository } from './repository/carro.repository';
 @Module({
   imports: [],
   controllers: [CarroController],
