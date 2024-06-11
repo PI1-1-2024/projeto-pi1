@@ -1,0 +1,82 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    background-color: #3e3d3d;
+    padding: 20px;
+}
+
+body{
+    background-color: #1E1E1E;
+}
+
+#navbar ul {
+    color: white;
+    font-size: xx-large;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #000;
+}
+
+#linha1 {
+    display: flex;
+}
+#linha2 {
+    display: flex;
+}
+
+.block_percurso{
+    block-size: 500px;
+    border-radius: 50px;
+    width: 100%;
+    border: 1px solid #272D34;
+    padding: 20px;
+    text-align: center;
+}
+
+.block_velocidade {
+    block-size: 500px;
+    border-radius: 50px;
+    width: 100%;
+    border: 1px solid #272D34;
+    padding: 20px;
+    text-align: center;
+}
+
+.block_info {
+    block-size: 500px;
+    background: linear-gradient(#28194E, #402068);
+    border-radius: 50px;
+    width: 100%;
+    border: 1px solid #272D34;
+    padding: 20px;
+    text-align: left;
+    color: white;
+}
+
+.block_consumo {
+    block-size: 500px;
+    border-radius: 50px;
+    width: 100%;
+    border: 1px solid #272D34;
+    padding: 20px;
+    text-align: center;
+}
+
+.block h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
