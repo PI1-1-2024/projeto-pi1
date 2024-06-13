@@ -1,14 +1,13 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
 import { CarroRepository } from '../repository/carro.repository';
 import { DadosCarroDto } from '../dto/DadosCarro.dto';
 import { DadosVeicularesEntity } from '../entity/dadosVeiculares.entity';
-import { CarroService } from '../service/carro.service';
+import { Injectable } from '@nestjs/common';
 
-@Controller('/percurso-carro')
-export class CarroController {
-  constructor(private carroService: CarroService) {}
-  @Post()
-  async criarPercuso(@Body() dadosPercurso: DadosCarroDto) {
+@Injectable()
+export class CarroService {
+  constructor(private carroRepository: CarroRepository) {}
+
+  async criarPercuso(dadosPercurso: DadosCarroDto) {
     const usuarioEntity = new DadosVeicularesEntity();
     usuarioEntity.velocidade = dadosPercurso.velocidade;
     usuarioEntity.aceleracao = dadosPercurso.aceleracao;
@@ -16,7 +15,7 @@ export class CarroController {
     usuarioEntity.consumo_energetico = dadosPercurso.consumo_energetico;
     usuarioEntity.numero_percurso = dadosPercurso.numero_percurso;
 
-    await this.carroService.criarPercuso(usuarioEntity);
+    await this.carroRepository.salvarPercurso(usuarioEntity);
     return usuarioEntity;
   }
 }
