@@ -1,15 +1,16 @@
 import { Injectable } from '@nestjs/common';
-import { DadosVeicularesEnity } from '../entity/dadosVeiculares.enity';
+import { DadosVeicularesEntity } from '../entity/dadosVeiculares.entity';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class CarroRepository {
-  private dadosPercurso: DadosVeicularesEnity[] = [];
+  constructor(
+    @InjectRepository(DadosVeicularesEntity)
+    private readonly carroRepository: Repository<DadosVeicularesEntity>,
+  ) {}
 
-  criarPercuso(dadosPercurso: DadosVeicularesEnity) {
-    this.dadosPercurso.push(dadosPercurso);
-  }
-
-  obterPercusos() {
-    return this.dadosPercurso;
+  salvarPercurso(dadosPercurso: DadosVeicularesEntity) {
+    this.carroRepository.save(dadosPercurso);
   }
 }
