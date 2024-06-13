@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { DadosVeicularesEntity } from '../entity/dadosVeiculares.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { DadosVeicularesEntity } from '../entity/dadosVeiculares.entity';
 
 @Injectable()
 export class CarroRepository {
@@ -12,5 +12,9 @@ export class CarroRepository {
 
   salvarPercurso(dadosPercurso: DadosVeicularesEntity) {
     this.carroRepository.save(dadosPercurso);
+  }
+
+  async listarTodosPercursos(): Promise<DadosVeicularesEntity[]> {
+    return this.carroRepository.find();
   }
 }
