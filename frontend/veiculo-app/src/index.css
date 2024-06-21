@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  /*background: linear-gradient(to bottom, #eef2f3 0%, #a2abba 100%);*/
+}
+
+.App-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+justify-content: space-between;
+}
+
+.App-header h1 {
+  flex-grow: 1;
+text-align: center;
+}
+
+h1 {
+  font-family: 'Times New Roman', serif;
+  margin-top: -20px; /* Ajuste este valor conforme necessário para subir o título */
+  background: linear-gradient(to right, #007f00, #007f00 25%, #000080 75%); /* Cores verde e azul */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px; /* Aumenta o tamanho do texto para melhor visualização */
+  color: transparent;
+}
+
+.footer {
+  font-family: 'Times New Roman', serif;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.05); /* Transparência leve para ser sutil */
+  font-size: 14px;
+  color: #333;
+  position: fixed;
+  bottom: 0;
+}

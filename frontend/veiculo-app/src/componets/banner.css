@@ -1,7 +1,7 @@
 .banner{
-    height: 200px;
-    width: 100%;
-    background-position: center;
+    height: 100px;
+    width: 5%;
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
 }

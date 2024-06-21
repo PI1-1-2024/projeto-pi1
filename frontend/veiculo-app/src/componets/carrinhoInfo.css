@@ -1,0 +1,65 @@
+/* CarrinhoInfo.css */
+
+.carrinho-info {
+    font-family: 'Times New Roman', serif;
+    text-align: center;
+    margin-top: 110px;
+}
+
+
+
+.info-container {
+    font-family: 'Times New Roman', serif;
+    display: flex;
+    justify-content: center; /* Centraliza as colunas */
+    margin-top: 20px;
+}
+
+.info-column {
+    font-family: 'Times New Roman', serif;
+    flex: 1; /* Faz cada coluna crescer igualmente */
+    padding: 20px; /* Adiciona um espaço interno para cada coluna */
+    margin: 0 10px; /* Espaço entre as colunas */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Mantém a sombra ao redor das colunas */
+    min-width: 0; /* Previne que a coluna cresça além do flex container */
+}
+
+.info-column h2 {
+    font-family: 'Times New Roman', serif;
+    overflow: visible; /* Permite que o texto seja exibido completamente */
+    white-space: normal; /* Permite que o texto use mais de uma linha se necessário */
+    text-overflow: clip; /* Remove as reticências e mostra todo o texto */
+    width: 100%; /* Define a largura máxima */
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+.info-column h1 {
+    font-family: 'Times New Roman', serif;
+    white-space: nowrap; /* Previne quebra de linha nos parágrafos */
+    overflow: hidden; /* Oculta qualquer texto que exceda o espaço disponível */
+    text-overflow: ellipsis; /* Adiciona reticências se necessário */
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+
+button {
+    font-family: 'Times New Roman', serif;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #0056b3; /* Um azul mais vibrante */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Tamanho maior para o texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #003d80; /* Escurece o botão quando o mouse passa por cima */
+}
+
+
