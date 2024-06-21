@@ -62,4 +62,62 @@ button:hover {
     background-color: #003d80; /* Escurece o botão quando o mouse passa por cima */
 }
 
+.carrinho-info {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.carrinho-info input, .carrinho-info button {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    display: block;
+    width: 95%;
+}
+
+.carrinho-info button {
+    background-color: #5c67f2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carrinho-info button:hover {
+    background-color: #4a50e0;
+}
+
+.carrinho-info input:focus {
+    border-color: #5c67f2;
+    outline: none;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.info-column {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 48%;
+}
+
+.info-column h3 {
+    color: #333;
+}
+
+.info-column p {
+    line-height: 1.5;
+    color: #666;
+}
+
+
 

@@ -1,49 +1,55 @@
 import React, { useState } from 'react';
-import './carrinhoInfo.css'; // Importando CSS caso você crie um
+import './carrinhoInfo.css';
+import CarroService from "../service/CarroService";
 
 function CarrinhoInfo() {
+        var carroService = new CarroService();
     const [dadosVeiculares, setDadosVeiculares] = useState({
         velocidade: '',
         aceleracao: '',
         tempo: '',
-        consumoEnergetico: '',
-        numeroPercurso: ''
+        consumo_energetico: '',
+        numero_percurso: ''
     });
 
     const [coordenadasPercurso, setCoordenadasPercurso] = useState({
-        numeroPercurso: '',
+        numero_percurso: '',
         x: '',
         y: ''
     });
 
-    function atualizarDados() {
-        // Simulação de atualização de dados
-        setDadosVeiculares({
-            velocidade: '60 km/h',
-            aceleracao: '3 m/s²',
-            tempo: '3.5 horas',
-            consumoEnergetico: '1.2 kWh',
-            numeroPercurso: '001'
-        });
+    const [numeroPercursoInput, setNumeroPercursoInput] = useState('');
 
-        setCoordenadasPercurso({
-            numeroPercurso: '001',
-            x: '35.6895',
-            y: '139.6917'
-        });
+    function buscarDadosPorNumeroPercurso() {
+        carroService.getCarroById(numeroPercursoInput)  // Adapte esta URL conforme necessário
+            .then(response => {
+                const { velocidade, aceleracao, tempo, consumo_energetico, numero_percurso } = response.data;
+                setDadosVeiculares({ velocidade, aceleracao, tempo, consumo_energetico, numero_percurso });
+            })
+            .catch(error => {
+                console.error('Erro ao buscar dados:', error);
+            });
     }
 
     return (
         <div className="carrinho-info">
             <h2>Informações do Carrinho:</h2>
+            <input
+                className="carrinho-info"
+                type="number"
+                value={numeroPercursoInput}
+                onChange={e => setNumeroPercursoInput(e.target.value)}
+                placeholder="Digite o número do percurso"
+            />
+            <button className="carrinho-info " onClick={buscarDadosPorNumeroPercurso}>Buscar Percurso</button>
             <div className="info-container">
                 <div className="info-column">
                     <h3>Dados Veiculares:</h3>
                     <p><strong>Velocidade:</strong> {dadosVeiculares.velocidade}</p>
                     <p><strong>Aceleração:</strong> {dadosVeiculares.aceleracao}</p>
                     <p><strong>Tempo de Percurso:</strong> {dadosVeiculares.tempo}</p>
-                    <p><strong>Consumo Energético:</strong> {dadosVeiculares.consumoEnergetico}</p>
-                    <p><strong>Número do Percurso:</strong> {dadosVeiculares.numeroPercurso}</p>
+                    <p><strong>Consumo Energético:</strong> {dadosVeiculares.consumo_energetico}</p>
+                    <p><strong>Número do Percurso:</strong> {dadosVeiculares.numero_percurso}</p>
                 </div>
                 <div className="info-column">
                     <h3>Coordenadas do Percurso:</h3>
@@ -52,7 +58,6 @@ function CarrinhoInfo() {
                     <p><strong>Y:</strong> {coordenadasPercurso.y}</p>
                 </div>
             </div>
-            <button onClick={atualizarDados}>Atualizar Dados</button>
         </div>
     );
 }
