@@ -1,10 +1,11 @@
-.banner{
-    height: 100px;
-    width: 5%;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
+.banner {
+    width: 50%; /* Ajusta a largura do banner */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo do banner horizontalmente */
+    margin: 20px 0; /* Adiciona margem acima e abaixo para separação */
 }
-.banner img{
-    max-width: 100%;
+
+.banner img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do banner */
+
 }

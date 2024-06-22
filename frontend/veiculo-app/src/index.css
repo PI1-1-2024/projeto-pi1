@@ -1,15 +1,15 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
 .App {
   display: flex;
@@ -17,25 +17,30 @@ code {
   align-items: center;
   width: 100%;
   height: 100vh;
-  /*background: linear-gradient(to bottom, #eef2f3 0%, #a2abba 100%);*/
+  background-color: #373743;
 }
 
 .App-header {
-  width: 100%;
   display: flex;
   align-items: center;
-justify-content: space-between;
+  flex-direction: column;
+  justify-content: center; /* Ajusta o espaçamento entre os itens */
+  width: 20%; /* Ocupa a largura total */
 }
 
 .App-header h1 {
-  flex-grow: 1;
-text-align: center;
+  font-size: 24px; /* Reduz o tamanho da fonte se necessário */
+  white-space: normal; /* Permite que o título envolva para a próxima linha */
+  text-align: center; /* Centraliza o texto */
+  margin: 10px 0; /* Adiciona uma pequena margem acima e abaixo para visualização */
+  padding: 0 20px; /* Aumenta o padding para não cortar as bordas do texto */
 }
 
 h1 {
   font-family: 'Times New Roman', serif;
-  margin-top: -20px; /* Ajuste este valor conforme necessário para subir o título */
-  background: linear-gradient(to right, #007f00, #007f00 25%, #000080 75%); /* Cores verde e azul */
+  margin-top: 20px; /* Ajuste este valor conforme necessário para subir o título */
+  /*background: linear-gradient(to right, #007f00, #007f00 25%, #000080 75%); /* Cores verde e azul */
+  background-color: white;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 36px; /* Aumenta o tamanho do texto para melhor visualização */
@@ -49,7 +54,7 @@ h1 {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.05); /* Transparência leve para ser sutil */
   font-size: 14px;
-  color: #333;
+  color: #c5cbd2;
   position: fixed;
   bottom: 0;
 }

@@ -3,16 +3,19 @@
 .carrinho-info {
     font-family: 'Times New Roman', serif;
     text-align: center;
-    margin-top: 110px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
 
 
 .info-container {
     font-family: 'Times New Roman', serif;
     display: flex;
-    justify-content: center; /* Centraliza as colunas */
     margin-top: 20px;
+    justify-content: space-between;
 }
 
 .info-column {
@@ -20,8 +23,12 @@
     flex: 1; /* Faz cada coluna crescer igualmente */
     padding: 20px; /* Adiciona um espaço interno para cada coluna */
     margin: 0 10px; /* Espaço entre as colunas */
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Mantém a sombra ao redor das colunas */
+    /*box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Mantém a sombra ao redor das colunas */
     min-width: 0; /* Previne que a coluna cresça além do flex container */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 48%;
 }
 
 .info-column h2 {
@@ -32,6 +39,7 @@
     width: 100%; /* Define a largura máxima */
     line-height: 1.5;
     letter-spacing: 0.5px;
+    color: #333;
 }
 
 .info-column h1 {
@@ -41,6 +49,7 @@
     text-overflow: ellipsis; /* Adiciona reticências se necessário */
     line-height: 1.5;
     letter-spacing: 0.5px;
+    color: #666;
 }
 
 
@@ -48,7 +57,7 @@ button {
     font-family: 'Times New Roman', serif;
     margin-top: 20px;
     padding: 12px 24px;
-    background-color: #0056b3; /* Um azul mais vibrante */
+    background-color: #0080ff; /* Um azul mais vibrante */
     color: white;
     border: none;
     border-radius: 5px;
@@ -59,15 +68,7 @@ button {
 }
 
 button:hover {
-    background-color: #003d80; /* Escurece o botão quando o mouse passa por cima */
-}
-
-.carrinho-info {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #0080ff; /* Escurece o botão quando o mouse passa por cima */
 }
 
 .carrinho-info input, .carrinho-info button {
@@ -80,43 +81,32 @@ button:hover {
 }
 
 .carrinho-info button {
-    background-color: #5c67f2;
+    background-color: #0080ff;
     color: white;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    padding: 8px 5px; /* Aumenta o padding para um botão maior */
+    margin: 5px 0;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    display: block;
+    width: 100%; /* Ajusta a largura do botão */
+    font-size: 20px; /* Aumenta o tamanho da fonte */
 }
 
 .carrinho-info button:hover {
-    background-color: #4a50e0;
+    background-color: #1d1db7;
 }
 
 .carrinho-info input:focus {
-    border-color: #5c67f2;
+    border-color: #2222bb;
     outline: none;
 }
 
-.info-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.info-column {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 48%;
-}
-
-.info-column h3 {
-    color: #333;
-}
-
-.info-column p {
-    line-height: 1.5;
-    color: #666;
+.carrinho-info input::placeholder {
+    color: #a2abba; /* Altere para a cor desejada */
+    opacity: 1; /* Garante que a cor do placeholder não seja transparente */
 }
 
 
