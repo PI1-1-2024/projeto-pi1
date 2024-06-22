@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { DadosCarroDto } from '../dto/DadosCarro.dto';
 import { CarroService } from '../service/carro.service';
 
@@ -14,5 +14,10 @@ export class CarroController {
   @Get()
   async listarPercursos() {
     return this.carroService.listarTodosPercursos();
+  }
+
+  @Get(':id')
+  async buscarPercusoPorId(@Param('id') id: number) {
+    return this.carroService.buscarPercusoPorId(id);
   }
 }

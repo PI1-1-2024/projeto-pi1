@@ -32,4 +32,16 @@ export class CarroService {
     });
     return percursos;
   }
+
+  async buscarPercusoPorId(id: number) {
+    const percursoSalvo = await this.carroRepository.buscarPercursoPorId(id);
+
+    return {
+      velocidade: percursoSalvo.velocidade,
+      aceleracao: percursoSalvo.aceleracao,
+      tempo: percursoSalvo.tempo,
+      consumo_energetico: percursoSalvo.consumo_energetico,
+      numero_percurso: percursoSalvo.numero_percurso,
+    };
+  }
 }

@@ -17,4 +17,8 @@ export class CarroRepository {
   async listarTodosPercursos(): Promise<DadosVeicularesEntity[]> {
     return this.carroRepository.find();
   }
+
+  async buscarPercursoPorId(id: number): Promise<DadosVeicularesEntity> {
+    return this.carroRepository.findOneById(id);
+  }
 }
