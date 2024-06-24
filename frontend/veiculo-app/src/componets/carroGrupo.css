@@ -1,0 +1,12 @@
+.carrinho-info {
+    position: relative;
+}
+
+.carrinho-image {
+    position: fixed;
+    right: 250px;
+    bottom:-220px;
+    width: 10px;
+    height: auto;
+    transform: scale(0.20);
+}

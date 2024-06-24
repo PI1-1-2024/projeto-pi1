@@ -1,15 +1,12 @@
-/* CarrinhoInfo.css */
-
 .carrinho-info {
     font-family: 'Times New Roman', serif;
     text-align: center;
-    margin-top: 20px;
-    background-color: #ffffff;
+    margin-top: 160px;
+    background-color: #C3C3C3;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
 }
-
 
 .info-container {
     font-family: 'Times New Roman', serif;
@@ -20,94 +17,110 @@
 
 .info-column {
     font-family: 'Times New Roman', serif;
-    flex: 1; /* Faz cada coluna crescer igualmente */
-    padding: 20px; /* Adiciona um espaço interno para cada coluna */
-    margin: 0 10px; /* Espaço entre as colunas */
-    /*box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Mantém a sombra ao redor das colunas */
-    min-width: 0; /* Previne que a coluna cresça além do flex container */
-    background: white;
+    flex: 1;
+    padding: 20px;
+    margin: 0 10px;
+    background: #c3c3c3;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 48%;
+    min-height: 200px; /* Adiciona uma altura mínima */
+}
+
+.info-column.large {
+    flex: none;
+    width: 675px;
+    min-height: 300px; /* Ajusta a altura mínima conforme necessário */
 }
 
 .info-column h2 {
     font-family: 'Times New Roman', serif;
-    overflow: visible; /* Permite que o texto seja exibido completamente */
-    white-space: normal; /* Permite que o texto use mais de uma linha se necessário */
-    text-overflow: clip; /* Remove as reticências e mostra todo o texto */
-    width: 100%; /* Define a largura máxima */
+    overflow: visible;
+    white-space: normal;
+    text-overflow: clip;
+    width: 100%;
     line-height: 1.5;
     letter-spacing: 0.5px;
     color: #333;
 }
 
-.info-column h1 {
+.info-column h3 {
     font-family: 'Times New Roman', serif;
-    white-space: nowrap; /* Previne quebra de linha nos parágrafos */
-    overflow: hidden; /* Oculta qualquer texto que exceda o espaço disponível */
-    text-overflow: ellipsis; /* Adiciona reticências se necessário */
+    overflow: visible;
+    white-space: normal;
+    text-overflow: clip;
+    width: 100%;
     line-height: 1.5;
     letter-spacing: 0.5px;
-    color: #666;
+    color: #333;
 }
 
+.info-column p {
+    font-family: 'Times New Roman', serif;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color: #333;
+}
 
-button {
+.info-column button {
     font-family: 'Times New Roman', serif;
     margin-top: 20px;
     padding: 12px 24px;
-    background-color: #0080ff; /* Um azul mais vibrante */
+    background-color: #143e7a;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 18px; /* Tamanho maior para o texto */
+    font-size: 18px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s;
+    width: 100%;
 }
 
-button:hover {
-    background-color: #0080ff; /* Escurece o botão quando o mouse passa por cima */
+.info-column button:hover {
+    background-color: #0e2d52;
 }
 
 .carrinho-info input, .carrinho-info button {
     padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #ddd;
+    margin: 10px -4px;
+    border: 2px solid #999999;
     border-radius: 4px;
     display: block;
     width: 95%;
+    background-color: #999999;
 }
 
 .carrinho-info button {
-    background-color: #0080ff;
-    color: white;
+    padding: 7px 0px;
+    background-color: #143e7a;
+    color: #ffffff;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    padding: 8px 5px; /* Aumenta o padding para um botão maior */
-    margin: 5px 0;
-    border: 2px solid #ddd;
     border-radius: 4px;
-    display: block;
-    width: 100%; /* Ajusta a largura do botão */
-    font-size: 20px; /* Aumenta o tamanho da fonte */
+    font-size: 20px;
+    width: 45%;
 }
 
 .carrinho-info button:hover {
-    background-color: #1d1db7;
+    background-color: #0e2d52;
 }
 
 .carrinho-info input:focus {
-    border-color: #2222bb;
+    border-color: #999999;
     outline: none;
 }
 
 .carrinho-info input::placeholder {
-    color: #a2abba; /* Altere para a cor desejada */
-    opacity: 1; /* Garante que a cor do placeholder não seja transparente */
+    font-family: 'Times New Roman', serif;
+    color: #b7b7b7;
+    opacity: 1;
 }
 
-
-
+.titulo-detalhes {
+    margin-top: 50px;
+    color: #FFFFFF;
+    text-align: left;
+    margin-left: 11px;
+    font-family: 'Times New Roman', serif;
+}

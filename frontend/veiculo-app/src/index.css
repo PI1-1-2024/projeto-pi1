@@ -5,6 +5,9 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 50px 0;
+  background-color: rgb(77, 77, 91); /* Transparência leve para ser sutil */
+  overflow: hidden;
 }
 
 code {
@@ -18,22 +21,37 @@ code {
   width: 100%;
   height: 100vh;
   background-color: #373743;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh; /* Garante que a App preencha pelo menos a altura completa da viewport */
+  padding-bottom: 70px; /* Ajuste conforme a altura do seu footer */
+  position: relative; /* Necessário para posicionar corretamente dentro do fluxo da página */
 }
 
 .App-header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center; /* Ajusta o espaçamento entre os itens */
-  width: 20%; /* Ocupa a largura total */
+  justify-content: left; /* Ajusta o espaçamento entre os itens */
+  width: 50%; /* Ocupa a largura total */
 }
 
 .App-header h1 {
   font-size: 24px; /* Reduz o tamanho da fonte se necessário */
   white-space: normal; /* Permite que o título envolva para a próxima linha */
   text-align: center; /* Centraliza o texto */
-  margin: 10px 0; /* Adiciona uma pequena margem acima e abaixo para visualização */
+  margin: -40px 0; /* Adiciona uma pequena margem acima e abaixo para visualização */
   padding: 0 20px; /* Aumenta o padding para não cortar as bordas do texto */
+}
+
+.professor-name {
+  color: white; /* ou qualquer cor que se ajuste ao seu design */
+  margin-right: -1200px; /* Ajuste conforme necessário */
+  font-size: 18px; /* Ajuste conforme necessário */
+  font-family: 'Times New Roman', serif;
+  padding: 0 20px;
 }
 
 h1 {
@@ -50,11 +68,38 @@ h1 {
 .footer {
   font-family: 'Times New Roman', serif;
   width: 100%;
-  text-align: center;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.05); /* Transparência leve para ser sutil */
+  padding: 10px 20px; /* Ajuste o padding conforme necessário */
+  background-color: rgb(77, 77, 91);
   font-size: 14px;
   color: #c5cbd2;
   position: fixed;
   bottom: 0;
+  left: 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Muda para layout de coluna */
+  align-items: flex-start; /* Alinha itens ao início da coluna */
+  width: 100%;
+}
+
+.footer-title {
+  margin-bottom: 5px; /* Ajuste conforme necessário para mover mais para cima */
+}
+
+.columns {
+  display: flex;
+  justify-content: flex-start; /* Alinha as colunas ao início */
+  gap: 50px; /* Aumenta ou diminui o espaço entre as colunas conforme necessário */
+}
+
+.columns ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.columns li {
+  margin: 5px 0; /* Espaçamento vertical entre os itens */
 }
