@@ -1,8 +1,8 @@
 .banner {
-    width: 50%; /* Ajusta a largura do banner */
-    display: flex;
-    justify-content: center; /* Centraliza o conteúdo do banner horizontalmente */
-    margin: 20px 0; /* Adiciona margem acima e abaixo para separação */
+    position: absolute;
+top: -45px;
+left: 10px;
+width: 4%;
 }
 
 .banner img {
