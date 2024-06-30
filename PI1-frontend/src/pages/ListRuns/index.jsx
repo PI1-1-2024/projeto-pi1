@@ -9,6 +9,9 @@ import {
   Heading,
   Image,
   SimpleGrid,
+  Skeleton,
+  Tag,
+  Tooltip,
   useToast,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
@@ -18,10 +21,19 @@ import image1 from "/images/card1.jpeg";
 import image2 from "/images/card2.jpeg";
 import image3 from "/images/card3.jpeg";
 import imagebg from "/images/OvoSkate.jpeg";
+import { Service } from "../../services/api";
+import { useQuery } from "@tanstack/react-query";
+
+const images = [image1, image2, image3];
 
 export function ListRuns() {
   const navigator = useNavigate();
   const toast = useToast();
+
+  const { isPending, data } = useQuery({
+    queryKey: ["percursos"],
+    queryFn: Service.getAllPercursos,
+  });
 
   const goTo = () => {
     const bluetooth = Bluetooth;
@@ -60,29 +72,44 @@ export function ListRuns() {
           height="70vh"
           zIndex={-1}
         />
-        <SimpleGrid
-          justifyContent="center"
-          borderRadius="md"
-          minChildWidth={"256px"}
-          w="100%"
-        >
-          <RunCard image={image1} name="Percurso 1" />
-          <RunCard image={image2} name="Percurso 2" />
-          <RunCard image={image3} name="Percurso 3" />
-          <RunCard image={image3} name="Percurso 3" />
-          <RunCard image={image3} name="Percurso 3" />
-        </SimpleGrid>
+        <Skeleton isLoaded={!isPending}>
+          <SimpleGrid
+            justifyContent="flex-start"
+            borderRadius="md"
+            minChildWidth={"256px"}
+            maxChildWidth={"256px"}
+          >
+            {data?.map((percurso, index) => (
+              <RunCard
+                key={`TaskCard${percurso.id}`}
+                image={images[index % images.length]}
+                {...percurso}
+              />
+            ))}
+          </SimpleGrid>
+        </Skeleton>
       </Box>
     </Center>
   );
 }
 
-function RunCard({ name, image }) {
+function RunCard({ id, image, velocidade, tempo, aceleracao }) {
   return (
-    <Card _hover={{ cursor: "pointer" }} w="full" px={2} py={3}>
+    <Card w="full" maxW="358px" px={2} py={3}>
       <Image src={image} objectFit="cover" borderRadius="md" h="138px" />
       <CardBody py={1}>
-        <Heading size="md">{name}</Heading>
+        <Heading size="md">{`Percurso ${id}`}</Heading>
+        <HStack mt={1} justifyContent="flex-end" w="full">
+          <Tooltip label="Velocidade média">
+            <Tag colorScheme="yellow">{`${velocidade}m/s`}</Tag>
+          </Tooltip>
+          <Tooltip label="Aceleração média">
+            <Tag colorScheme="yellow">{`${aceleracao}m/s²`}</Tag>
+          </Tooltip>
+          <Tooltip label="Tempo total">
+            <Tag colorScheme="yellow">{`${tempo}s`}</Tag>
+          </Tooltip>
+        </HStack>
       </CardBody>
       <CardFooter justifyContent="flex-end" py={1}>
         <Button colorScheme="yellow">Ver dados</Button>
