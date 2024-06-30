@@ -87,7 +87,7 @@ export function NewRun() {
               <Center>
                 <VStack>
                   <Text align="center">
-                    Posicione o carrinho no percusso, e então inicie a conexão
+                    Posicione o carrinho no percurso, e então inicie a conexão
                     bluetooth para iniciar o percusso
                   </Text>
                   <Button onClick={startConnection} colorScheme="blue">

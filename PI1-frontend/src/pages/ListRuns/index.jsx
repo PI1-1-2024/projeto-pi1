@@ -50,7 +50,7 @@ export function ListRuns() {
         <HStack justifyContent="space-between" w="full" pr={14}>
           <Heading>Trajetos</Heading>
           <Button onClick={goTo} variant="outline" colorScheme="yellow">
-            Novo percusso
+            Novo percurso
           </Button>
         </HStack>
         <Image
