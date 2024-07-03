@@ -23,10 +23,11 @@ export class CarroRepository {
   }
 
   async buscarPercursoPorNumeroPercurso(
-    numeroPercurso: number,
+    nomePercurso: string,
   ): Promise<DadosVeicularesEntity[]> {
     return this.carroRepository.find({
-      where: { numero_percurso: numeroPercurso },
+      where: { nome_percurso: nomePercurso },
+      order: { data_criacao: 'ASC' },
     });
   }
 }

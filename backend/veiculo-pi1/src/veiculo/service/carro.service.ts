@@ -13,7 +13,8 @@ export class CarroService {
     dadosVeicularesEntity.aceleracao = dadosPercurso.aceleracao;
     dadosVeicularesEntity.tempo = dadosPercurso.tempo;
     dadosVeicularesEntity.consumo_energetico = dadosPercurso.consumo_energetico;
-    dadosVeicularesEntity.numero_percurso = dadosPercurso.numero_percurso;
+    dadosVeicularesEntity.nome_percurso = dadosPercurso.nome_percurso;
+    dadosVeicularesEntity.data_criacao = new Date();
 
     await this.carroRepository.salvarPercurso(dadosVeicularesEntity);
   }
@@ -27,7 +28,7 @@ export class CarroService {
         aceleracao: percurso.aceleracao,
         tempo: percurso.tempo,
         consumo_energetico: percurso.consumo_energetico,
-        numero_percurso: percurso.numero_percurso,
+        numero_percurso: percurso.nome_percurso,
       };
     });
     return percursos;
@@ -41,19 +42,17 @@ export class CarroService {
       aceleracao: percursoSalvo.aceleracao,
       tempo: percursoSalvo.tempo,
       consumo_energetico: percursoSalvo.consumo_energetico,
-      numero_percurso: percursoSalvo.numero_percurso,
+      numero_percurso: percursoSalvo.nome_percurso,
     };
   }
 
-  async buscarPercusoPorNumeroPercurso(numeroPercurso: number) {
+  async buscarPercusoPorNumeroPercurso(nomePercurso: string) {
     const percursoSalvo =
-      await this.carroRepository.buscarPercursoPorNumeroPercurso(
-        numeroPercurso,
-      );
+      await this.carroRepository.buscarPercursoPorNumeroPercurso(nomePercurso);
 
     return percursoSalvo.map((percurso) => {
       return {
-        numero_percurso: percurso.numero_percurso,
+        numero_percurso: percurso.nome_percurso,
         velocidade: percurso.velocidade,
       };
     });

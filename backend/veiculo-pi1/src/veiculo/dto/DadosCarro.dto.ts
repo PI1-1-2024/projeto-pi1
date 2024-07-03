@@ -3,5 +3,5 @@ export class DadosCarroDto {
   aceleracao: number;
   tempo: number;
   consumo_energetico: number;
-  numero_percurso: number;
+  nome_percurso: string;
 }

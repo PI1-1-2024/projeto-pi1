@@ -12,6 +12,8 @@ export class DadosVeicularesEntity {
   tempo: number;
   @Column({ name: 'consumo_energetico', nullable: false, type: 'decimal' })
   consumo_energetico: number;
-  @Column({ name: 'numero_percurso', nullable: false })
-  numero_percurso: number;
+  @Column({ name: 'nome_percurso', nullable: false })
+  nome_percurso: string;
+  @Column({ name: 'data_criacao', nullable: false, type: 'timestamp' })
+  data_criacao: Date;
 }
