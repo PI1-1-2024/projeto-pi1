@@ -20,4 +20,11 @@ export class CarroController {
   async buscarPercusoPorId(@Param('id') id: number) {
     return this.carroService.buscarPercusoPorId(id);
   }
+
+  @Get('percurso/:numero_percurso')
+  async buscarPercusoPorNumeroPercurso(
+    @Param('numero_percurso') numeroPercurso: number,
+  ) {
+    return this.carroService.buscarPercusoPorNumeroPercurso(numeroPercurso);
+  }
 }

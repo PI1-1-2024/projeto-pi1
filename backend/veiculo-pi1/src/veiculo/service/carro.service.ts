@@ -44,4 +44,18 @@ export class CarroService {
       numero_percurso: percursoSalvo.numero_percurso,
     };
   }
+
+  async buscarPercusoPorNumeroPercurso(numeroPercurso: number) {
+    const percursoSalvo =
+      await this.carroRepository.buscarPercursoPorNumeroPercurso(
+        numeroPercurso,
+      );
+
+    return percursoSalvo.map((percurso) => {
+      return {
+        numero_percurso: percurso.numero_percurso,
+        velocidade: percurso.velocidade,
+      };
+    });
+  }
 }
