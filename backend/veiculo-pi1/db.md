@@ -2,13 +2,15 @@
 
 CREATE TABLE dados_veiculares (
 id SERIAL PRIMARY KEY,
-velocidade DECIMAL NOT NULL,    -- Velocidade em metros por segundo (m/s)
-aceleracao DECIMAL NOT NULL,    -- Aceleração em metros por segundo ao quadrado (m/s^2)
-tempo DECIMAL NOT NULL,         -- Tempo em segundos (s)
-consumo_energetico DECIMAL NOT NULL, -- Consumo energético em joules (J)
-numero_percurso INT NOT NULL,
-UNIQUE (numero_percurso) -- Garante que cada percurso tenha um número único
+velocidade DECIMAL NOT NULL, 
+aceleracao DECIMAL NOT NULL,  
+tempo DECIMAL NOT NULL,     
+consumo_energetico DECIMAL NOT NULL, 
+nome_percurso VARCHAR(255) NOT NULL, 
+data_criacao TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+UNIQUE (nome_percurso)              
 );
+
 
 -- Criação da tabela coordenadas_percurso com uma chave estrangeira referenciando dados_veiculares
 

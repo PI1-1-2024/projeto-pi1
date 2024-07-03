@@ -23,8 +23,8 @@ export class CarroController {
 
   @Get('percurso/:numero_percurso')
   async buscarPercusoPorNumeroPercurso(
-    @Param('numero_percurso') numeroPercurso: number,
+    @Param('numero_percurso') nomePercurso: string,
   ) {
-    return this.carroService.buscarPercusoPorNumeroPercurso(numeroPercurso);
+    return this.carroService.buscarPercusoPorNumeroPercurso(nomePercurso);
   }
 }
